@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 export default class Follow extends Component {
   render() {
+    const { navigation } = this.props;
     return (
       <View>
-        <Text>Follow Renderizado</Text>
+        <Button
+          title="Ir a Autor"
+          onPress={() => {
+          navigation.navigate('Autor');
+        }}
+        />
       </View>
     );
   }

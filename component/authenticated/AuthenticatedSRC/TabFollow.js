@@ -1,13 +1,12 @@
 import { TabNavigator } from 'react-navigation';
-import FollowScreen from './tools/Follow';
-import Follow2Screen from './tools/Follow2';
+import Follow from './tools/Follow';
 
 const TabFollow = TabNavigator({
   Follow: {
-    screen: Follow2Screen,
+    screen: Follow,
   },
   Followers: {
-    screen: FollowScreen,
+    screen: Follow,
   },
 }, {
   swipeEnabled: false,
