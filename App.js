@@ -9,8 +9,10 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-// import NotAutenticateRoutes from './component/not-authenticated/notAuthenticateRoutes';
-import AuthenticatedRutas from './component/authenticated/AuthenticatedRutas';
+import { Provider } from 'react-redux';
+import NotAutenticateRoutes from './component/not-authenticated/notAuthenticateRoutes';
+// import AuthenticatedRutas from './component/authenticated/AuthenticatedRutas';
+import Store from './Store/Store';
 
 export default class App extends Component {
   constructor() {
@@ -22,7 +24,9 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <AuthenticatedRutas />
+        <Provider store={Store}>
+          <NotAutenticateRoutes />
+        </Provider>
       </View>
     );
   }
