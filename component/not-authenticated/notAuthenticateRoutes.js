@@ -1,9 +1,7 @@
-import React from 'react';
-import { Text, View, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
 import SignIn from './tools/SignIn';
 import SignUp from './tools/SignUp';
-
 
 const NotAutenticateRoutes = StackNavigator(
   {
@@ -15,6 +13,9 @@ const NotAutenticateRoutes = StackNavigator(
     },
   },
   {
+    transitionConfig: () => ({
+      screenInterpolator: CardStackStyleInterpolator.forVertical,
+    }),
     headerMode: 'none',
   },
 );
