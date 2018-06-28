@@ -12,12 +12,14 @@ export default class SignIn extends Component {
     return (
       <View style={styles.container}>
         <Text>Componente SignIn</Text>
-        <Button
-          title="Navegar a SignUp"
-          onPress={() => {
+        <View style={styles.Button}>
+          <Button
+            title="Navegar a SignUp"
+            onPress={() => {
           navigation.navigate('SignUp');
         }}
-        />
+          />
+        </View>
       </View>
     );
   }
@@ -27,5 +29,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+  },
+  Button: {
+    alignItems: 'center',
   },
 });

@@ -14,7 +14,7 @@ const NotAutenticateRoutes = StackNavigator(
   },
   {
     transitionConfig: () => ({
-      screenInterpolator: CardStackStyleInterpolator.forVertical,
+      screenInterpolator: CardStackStyleInterpolator.forHorizontal,
     }),
     headerMode: 'none',
   },

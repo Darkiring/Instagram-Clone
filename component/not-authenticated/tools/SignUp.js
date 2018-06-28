@@ -4,8 +4,10 @@ import {
   Text,
   StyleSheet,
   Button,
+  TextInput,
 } from 'react-native';
 import { connect } from 'react-redux';
+import SignUpForm from './Formas/SignUpForm';
 
 class SignUp extends Component {
   render() {
@@ -13,12 +15,18 @@ class SignUp extends Component {
     return (
       <View style={styles.container}>
         <Text>Componente SignUp</Text>
-        <Button
-          title="Navegar a SignIn"
-          onPress={() => {
+        <SignUpForm />
+        <TextInput
+          placeholder="Correo Electronicos"
+        />
+        <View style={styles.Button}>
+          <Button
+            title="Navegar a SignIn"
+            onPress={() => {
           navigation.goBack();
         }}
-        />
+          />
+        </View>
       </View>
     );
   }
@@ -27,7 +35,12 @@ class SignUp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'stretch',
     justifyContent: 'center',
+    backgroundColor: '#fff',
+  },
+  Button: {
+    alignItems: 'center',
   },
 });
 
