@@ -5,8 +5,9 @@ import {
   StyleSheet,
   Button,
 } from 'react-native';
+import { connect } from 'react-redux';
 
-export default class SignUp extends Component {
+class SignUp extends Component {
   render() {
     const { navigation } = this.props;
     return (
@@ -29,3 +30,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+const mapStateToProps = state => ({
+  numero: state.reducerPrueba,
+});
+
+const mapDispatchToProps = dispatch => ({
+  aumentar: () => {
+    dispatch({ type: 'AUMENTAR_REDUCER_PRUEBA' });
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+
