@@ -21,9 +21,9 @@ const SignUpForm = (props) => {
   return (
     <View>
       <Text> Redux Renderiza un Form </Text>
+      <Text>Redux Form</Text>
       <Field name="nombre" component={fieldNombre} />
       <Field name="correo" component={fieldNombre} />
-      <Text>Redux Form</Text>
       <Button
         title="Registrar"
         onPress={props.handleSubmit(values => console.log(values))}
