@@ -14,7 +14,6 @@ class SignUp extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <Text>Componente SignUp</Text>
         <SignUpForm />
         <TextInput
           placeholder="Correo Electronicos"

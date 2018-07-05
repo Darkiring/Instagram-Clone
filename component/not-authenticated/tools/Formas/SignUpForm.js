@@ -8,17 +8,28 @@ import {
 } from 'react-native';
 import { Field, reduxForm } from 'redux-form';
 
-const fieldNombre = () => (
+const fieldNombre = props => (
   <TextInput
     placeholder="Texto desde Field Nombre"
+    onChangeText={props.input.onChange}
+    value={props.input.value}
   />
 );
 
-const SignUpForm = () => (
-  <View>
-    <Text> Redux Renderiza un Form </Text>
-    <Field name="nombre" component={fieldNombre} />
-  </View>
-);
+const SignUpForm = (props) => {
+  console.log(props);
+  return (
+    <View>
+      <Text> Redux Renderiza un Form </Text>
+      <Field name="nombre" component={fieldNombre} />
+      <Field name="correo" component={fieldNombre} />
+      <Text>Redux Form</Text>
+      <Button
+        title="Registrar"
+        onPress={props.handleSubmit(values => console.log(values))}
+      />
+    </View>
+  );
+};
 
 export default reduxForm({ form: 'SignUpForm' })(SignUpForm);
