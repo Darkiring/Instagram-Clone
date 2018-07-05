@@ -70530,12 +70530,22 @@ __d(function (global, require, module, exports, _dependencyMap) {
         },
         " Redux Renderiza un Form "
       ),
+      _react2.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        },
+        " Redux Form "
+      ),
       _react2.default.createElement(_reduxForm.Field, {
         name: "nombre",
         component: fieldNombre,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 25
         }
       }),
       _react2.default.createElement(_reduxForm.Field, {
@@ -70543,19 +70553,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
         component: fieldNombre,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 26
         }
       }),
-      _react2.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 26
-          }
-        },
-        "Redux Form"
-      ),
       _react2.default.createElement(_reactNative.Button, {
         title: "Registrar",
         onPress: props.handleSubmit(function (values) {
