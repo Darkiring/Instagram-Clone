@@ -70293,42 +70293,22 @@ __d(function (global, require, module, exports, _dependencyMap) {
               lineNumber: 14
             }
           },
-          _react3.default.createElement(
-            _reactNative.Text,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 15
-              }
+          _react3.default.createElement(_SignInForm2.default, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 15
+            }
+          }),
+          _react3.default.createElement(_reactNative.Button, {
+            title: "Registrarme",
+            onPress: function onPress() {
+              navigation.navigate('SignUp');
             },
-            "Componente SignIn"
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.Button,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 16
-              }
-            },
-            _react3.default.createElement(_SignInForm2.default, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 17
-              }
-            }),
-            _react3.default.createElement(_reactNative.Button, {
-              title: "Navegar a SignUp",
-              onPress: function onPress() {
-                navigation.navigate('SignUp');
-              },
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 18
-              }
-            })
-          )
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 16
+            }
+          })
         );
       }
     }]);
@@ -70341,10 +70321,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var styles = _reactNative.StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center'
-    },
-    Button: {
-      alignItems: 'center'
+      justifyContent: 'center',
+      backgroundColor: '#fff',
+      paddingHorizontal: 18
     }
   });
 },581,[108,175,12,696],"instagramClone/component/not-authenticated/tools/SignIn.js");
@@ -70419,13 +70398,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 16
+              lineNumber: 17
             }
           },
           _react3.default.createElement(_SignUpForm2.default, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 17
+              lineNumber: 19
             }
           }),
           _react3.default.createElement(
@@ -70434,17 +70413,17 @@ __d(function (global, require, module, exports, _dependencyMap) {
               style: styles.Button,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 18
+                lineNumber: 20
               }
             },
             _react3.default.createElement(_reactNative.Button, {
-              title: "Navegar a SignIn",
+              title: "Cancelar",
               onPress: function onPress() {
                 navigation.goBack();
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 19
+                lineNumber: 21
               }
             })
           )
@@ -70458,12 +70437,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var styles = _reactNative.StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'stretch',
       justifyContent: 'center',
-      backgroundColor: '#fff'
-    },
-    Button: {
-      alignItems: 'center'
+      backgroundColor: '#fff',
+      paddingHorizontal: 16
     }
   });
 
@@ -70508,7 +70484,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 14
         }
       },
       _react2.default.createElement(_reactNative.TextInput, {
@@ -70521,7 +70497,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         onBlur: props.input.onBlur,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 15
         }
       }),
       props.meta.touched && props.meta.error && _react2.default.createElement(
@@ -70532,7 +70508,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 24
           }
         },
         props.meta.error
@@ -70581,28 +70557,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 65
         }
       },
       _react2.default.createElement(
         _reactNative.Text,
         {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 65
-          }
-        },
-        " Redux Renderiza un Form "
-      ),
-      _react2.default.createElement(
-        _reactNative.Text,
-        {
+          style: styles.texto,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 66
           }
         },
-        " Redux Form "
+        " Datos necesarios para registro "
       ),
       _react2.default.createElement(_reduxForm.Field, {
         name: "nombre",
@@ -70645,6 +70612,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }
       }),
       _react2.default.createElement(_reactNative.Button, {
+        style: {
+          alignItems: 'center'
+        },
         title: "Registrar",
         onPress: props.handleSubmit(function (values) {
           return console.log(values);
@@ -70656,6 +70626,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
       })
     );
   };
+
+  var styles = _reactNative.StyleSheet.create({
+    texto: {
+      fontSize: 18
+    }
+  });
 
   exports.default = (0, _reduxForm.reduxForm)({
     form: 'SignUpForm',
@@ -78752,7 +78728,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 14
         }
       },
       _react2.default.createElement(_reactNative.TextInput, {
@@ -78765,7 +78741,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         onBlur: props.input.onBlur,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 15
         }
       }),
       props.meta.touched && props.meta.error && _react2.default.createElement(
@@ -78776,7 +78752,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 24
           }
         },
         props.meta.error
@@ -78811,28 +78787,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 52
         }
       },
       _react2.default.createElement(
         _reactNative.Text,
         {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 52
-          }
-        },
-        " Redux Renderiza un Form "
-      ),
-      _react2.default.createElement(
-        _reactNative.Text,
-        {
+          style: styles.texto,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 53
           }
         },
-        " Redux Form "
+        " Iniciar sesion "
       ),
       _react2.default.createElement(_reduxForm.Field, {
         name: "correo",
@@ -78867,6 +78834,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
       })
     );
   };
+
+  var styles = _reactNative.StyleSheet.create({
+    texto: {
+      fontSize: 18
+    }
+  });
 
   exports.default = (0, _reduxForm.reduxForm)({
     form: 'SignInForm',

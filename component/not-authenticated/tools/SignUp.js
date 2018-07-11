@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Button,
   TextInput,
+  Image,
 } from 'react-native';
 import { connect } from 'react-redux';
 import SignUpForm from './Formas/SignUpForm';
@@ -14,10 +15,11 @@ class SignUp extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
+        
         <SignUpForm />
         <View style={styles.Button}>
           <Button
-            title="Navegar a SignIn"
+            title="Cancelar"
             onPress={() => {
           navigation.goBack();
         }}
@@ -31,12 +33,10 @@ class SignUp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'stretch',
     justifyContent: 'center',
     backgroundColor: '#fff',
-  },
-  Button: {
-    alignItems: 'center',
+    paddingHorizontal: 16,
+
   },
 });
 

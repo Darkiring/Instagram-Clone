@@ -4,6 +4,7 @@ import {
   Text,
   Button,
   TextInput,
+  StyleSheet,
 } from 'react-native';
 import { Field, reduxForm } from 'redux-form';
 
@@ -62,19 +63,25 @@ const SignUpForm = (props) => {
   console.log(props);
   return (
     <View>
-      <Text> Redux Renderiza un Form </Text>
-      <Text> Redux Form </Text>
+      <Text style={styles.texto}> Datos necesarios para registro </Text>
       <Field name="nombre" component={fieldNombre} ph="Ingrese su nombre Usuario" />
       <Field name="correo" component={fieldNombre} ph="Ingrese su correo" keyboard="email-address" autocapi="none" />
       <Field name="password" component={fieldNombre} ph="Ingrese su contraseña" sc />
       <Field name="confirmacion" component={fieldNombre} ph="Ingrese nuevamente su contraseña" sc />
       <Button
+        style={{ alignItems: 'center' }}
         title="Registrar"
         onPress={props.handleSubmit(values => console.log(values))}
       />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  texto: {
+    fontSize: 18,
+  },
+});
 
 export default reduxForm({
   form: 'SignUpForm',

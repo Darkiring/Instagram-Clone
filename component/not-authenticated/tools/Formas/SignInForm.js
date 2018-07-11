@@ -4,6 +4,7 @@ import {
   Text,
   Button,
   TextInput,
+  StyleSheet,
 } from 'react-native';
 import { Field, reduxForm } from 'redux-form';
 
@@ -49,8 +50,7 @@ const SignInForm = (props) => {
   console.log(props);
   return (
     <View>
-      <Text> Redux Renderiza un Form </Text>
-      <Text> Redux Form </Text>
+      <Text style={styles.texto}> Iniciar sesion </Text>
       <Field name="correo" component={fieldNombre} ph="Ingrese su correo" keyboard="email-address" autocapi="none" />
       <Field name="password" component={fieldNombre} ph="Ingrese su contraseña" sc />
       <Button
@@ -60,6 +60,12 @@ const SignInForm = (props) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  texto: {
+    fontSize: 18,
+  },
+});
 
 export default reduxForm({
   form: 'SignInForm',
