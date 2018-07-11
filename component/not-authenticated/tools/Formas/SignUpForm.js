@@ -30,15 +30,15 @@ const validate = (values) => {
   if (!values.nombre) {
     errors.nombre = 'Campo requerido';
   } else if (values.nombre.length < 5) {
-    errors.nombre = 'El nombre debe al menos tener un tamaño minimo de 5 caracteres';
+    errors.nombre = 'El nombre de usuario debe al menos tener un tamaño minimo de 5 caracteres';
   } else if (values.nombre.lenght > 10) {
-    errors.nombre = 'El nombre es demasiado grande';
+    errors.nombre = 'El nombre de usuario es demasiado grande';
   }
 
   if (!values.correo) {
-    errors.correo = 'Campo requerido';
+    errors.correo = 'Correo requerido';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.correo)) {
-    errors.correo = 'Email Invalido';
+    errors.correo = 'Correo Invalido';
   }
 
   if (!values.password) {
