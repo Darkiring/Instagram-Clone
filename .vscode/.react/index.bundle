@@ -70498,7 +70498,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 13
         }
       },
       _react2.default.createElement(_reactNative.TextInput, {
@@ -70511,7 +70511,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         onBlur: props.input.onBlur,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 14
         }
       }),
       props.meta.touched && props.meta.error && _react2.default.createElement(
@@ -70522,7 +70522,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 23
           }
         },
         props.meta.error
@@ -70571,7 +70571,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 64
         }
       },
       _react2.default.createElement(
@@ -70579,7 +70579,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 65
           }
         },
         " Redux Renderiza un Form "
@@ -70589,7 +70589,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 66
           }
         },
         " Redux Form "
@@ -70600,7 +70600,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         ph: "Ingrese su nombre Usuario",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 67
         }
       }),
       _react2.default.createElement(_reduxForm.Field, {
@@ -70611,7 +70611,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         autocapi: "none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 68
         }
       }),
       _react2.default.createElement(_reduxForm.Field, {
@@ -70621,7 +70621,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         sc: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 69
         }
       }),
       _react2.default.createElement(_reduxForm.Field, {
@@ -70631,7 +70631,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         sc: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 70
         }
       }),
       _react2.default.createElement(_reactNative.Button, {
@@ -70641,7 +70641,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 71
         }
       })
     );
