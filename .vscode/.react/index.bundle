@@ -70240,6 +70240,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _reactNative = require(_dependencyMap[2], "react-native");
 
+  var _SignInForm = require(_dependencyMap[3], "./Formas/SignInForm");
+
+  var _SignInForm2 = _interopRequireDefault(_SignInForm);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70286,7 +70290,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 13
+              lineNumber: 14
             }
           },
           _react3.default.createElement(
@@ -70294,7 +70298,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 14
+                lineNumber: 15
               }
             },
             "Componente SignIn"
@@ -70305,9 +70309,15 @@ __d(function (global, require, module, exports, _dependencyMap) {
               style: styles.Button,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 15
+                lineNumber: 16
               }
             },
+            _react3.default.createElement(_SignInForm2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 17
+              }
+            }),
             _react3.default.createElement(_reactNative.Button, {
               title: "Navegar a SignUp",
               onPress: function onPress() {
@@ -70315,7 +70325,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 16
+                lineNumber: 18
               }
             })
           )
@@ -70337,7 +70347,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       alignItems: 'center'
     }
   });
-},581,[108,175,12],"instagramClone/component/not-authenticated/tools/SignIn.js");
+},581,[108,175,12,696],"instagramClone/component/not-authenticated/tools/SignIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -78719,6 +78729,150 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var store = (0, _redux.createStore)(reducers);
   exports.default = store;
 },694,[499,584],"instagramClone/Store/Store.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  var _jsxFileName = "c:\\Users\\Abrah\\Desktop\\Udemy React-Native (Proyectos)\\instagramClone\\component\\not-authenticated\\tools\\Formas\\SignInForm.js";
+
+  var _react = require(_dependencyMap[0], "react");
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactNative = require(_dependencyMap[1], "react-native");
+
+  var _reduxForm = require(_dependencyMap[2], "redux-form");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var fieldNombre = function fieldNombre(props) {
+    console.log(props);
+    return _react2.default.createElement(
+      _reactNative.View,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      },
+      _react2.default.createElement(_reactNative.TextInput, {
+        placeholder: props.ph,
+        onChangeText: props.input.onChange,
+        value: props.input.value,
+        secureTextEntry: props.sc,
+        keyboardType: props.keyboard,
+        autoCapitalize: props.autocapi,
+        onBlur: props.input.onBlur,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        }
+      }),
+      props.meta.touched && props.meta.error && _react2.default.createElement(
+        _reactNative.Text,
+        {
+          style: {
+            color: 'red'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          }
+        },
+        props.meta.error
+      )
+    );
+  };
+
+  var validate = function validate(values) {
+    var errors = {};
+
+    if (!values.correo) {
+      errors.correo = 'Correo requerido';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.correo)) {
+      errors.correo = 'Correo Invalido';
+    }
+
+    if (!values.password) {
+      errors.password = 'Contraseña requerida';
+    } else if (values.password.lenght < 5) {
+      errors.password = 'Contraseña muy corta';
+    } else if (values.password.lenght > 15) {
+      errors.passsword = 'La contraseña no puede ser mayor a 15 caracteres';
+    }
+
+    return errors;
+  };
+
+  var SignInForm = function SignInForm(props) {
+    console.log(props);
+    return _react2.default.createElement(
+      _reactNative.View,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        }
+      },
+      _react2.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          }
+        },
+        " Redux Renderiza un Form "
+      ),
+      _react2.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          }
+        },
+        " Redux Form "
+      ),
+      _react2.default.createElement(_reduxForm.Field, {
+        name: "correo",
+        component: fieldNombre,
+        ph: "Ingrese su correo",
+        keyboard: "email-address",
+        autocapi: "none",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        }
+      }),
+      _react2.default.createElement(_reduxForm.Field, {
+        name: "password",
+        component: fieldNombre,
+        ph: "Ingrese su contrase\xF1a",
+        sc: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        }
+      }),
+      _react2.default.createElement(_reactNative.Button, {
+        title: "Ingresar",
+        onPress: props.handleSubmit(function (values) {
+          return console.log(values);
+        }),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        }
+      })
+    );
+  };
+
+  exports.default = (0, _reduxForm.reduxForm)({
+    form: 'SignInForm',
+    validate: validate
+  })(SignInForm);
+},696,[108,12,584],"instagramClone/component/not-authenticated/tools/Formas/SignInForm.js");
 require(23);
 require(11);
 //# sourceMappingURL=index.map

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Button,
 } from 'react-native';
+import SignInForm from './Formas/SignInForm';
 
 export default class SignIn extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class SignIn extends Component {
       <View style={styles.container}>
         <Text>Componente SignIn</Text>
         <View style={styles.Button}>
+          <SignInForm />
           <Button
             title="Navegar a SignUp"
             onPress={() => {
