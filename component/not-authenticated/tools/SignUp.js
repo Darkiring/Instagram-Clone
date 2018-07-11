@@ -15,9 +15,6 @@ class SignUp extends Component {
     return (
       <View style={styles.container}>
         <SignUpForm />
-        <TextInput
-          placeholder="Correo Electronicos"
-        />
         <View style={styles.Button}>
           <Button
             title="Navegar a SignIn"
