@@ -20,6 +20,7 @@ const fieldNombre = (props) => {
         keyboardType={props.keyboard}
         autoCapitalize={props.autocapi}
         onBlur={props.input.onBlur}
+        placeholderTextColor="white"
       />
       {props.meta.touched && props.meta.error && <Text style={{ color: 'red' }}>{props.meta.error}</Text>}
     </View>
@@ -64,6 +65,7 @@ const SignInForm = (props) => {
 const styles = StyleSheet.create({
   texto: {
     fontSize: 18,
+    color: 'white',
   },
 });
 

@@ -7,9 +7,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import { Field, reduxForm } from 'redux-form';
+import { autenticacion } from '../../../../Store/Servicios/Firebase';
 
 const fieldNombre = (props) => {
-  console.log(props);
+  console.log('Inputs');
   return (
     <View>
       <TextInput
@@ -44,7 +45,7 @@ const validate = (values) => {
 
   if (!values.password) {
     errors.password = 'Contraseña requerida';
-  } else if (values.password.lenght < 5) {
+  } else if (values.password.lenght < 6) {
     errors.password = 'Contraseña muy corta';
   } else if (values.password.lenght > 15) {
     errors.passsword = 'La contraseña no puede ser mayor a 15 caracteres';
@@ -60,7 +61,7 @@ const validate = (values) => {
 };
 
 const SignUpForm = (props) => {
-  console.log(props);
+  console.log('SignUpForm');
   return (
     <View>
       <Text style={styles.texto}> Datos necesarios para registro </Text>
@@ -71,7 +72,23 @@ const SignUpForm = (props) => {
       <Button
         style={{ alignItems: 'center' }}
         title="Registrar"
-        onPress={props.handleSubmit(values => console.log(values))}
+        onPress={props.handleSubmit((values) => {
+          console.log(values);
+          // console.log(autenticacion);
+          autenticacion
+          .createUserWithEmailAndPassword(values.correo, values.password)
+          .then((success) => {
+            console.log(success);
+          })
+          .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode);
+            console.log(errorMessage);
+            // ...
+          });
+        })}
       />
     </View>
   );
