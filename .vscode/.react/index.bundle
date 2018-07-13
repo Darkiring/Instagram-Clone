@@ -70410,6 +70410,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
         autoCapitalize: props.autocapi,
         onBlur: props.input.onBlur,
         placeholderTextColor: "white",
+        style: {
+          color: 'white'
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
@@ -70423,7 +70426,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 26
           }
         },
         props.meta.error
@@ -70458,7 +70461,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         }
       },
       _react2.default.createElement(
@@ -70467,7 +70470,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           style: styles.texto,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 55
           }
         },
         " Iniciar sesion "
@@ -70480,7 +70483,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         autocapi: "none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 56
         }
       }),
       _react2.default.createElement(_reduxForm.Field, {
@@ -70490,7 +70493,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         sc: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 57
         }
       }),
       _react2.default.createElement(_reactNative.Button, {
@@ -70500,7 +70503,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 58
         }
       })
     );
@@ -78631,7 +78634,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           _react3.default.createElement(_SignUpForm2.default, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 19
+              lineNumber: 18
             }
           }),
           _react3.default.createElement(
@@ -78640,7 +78643,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               style: styles.Button,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 20
+                lineNumber: 19
               }
             },
             _react3.default.createElement(_reactNative.Button, {
@@ -78650,7 +78653,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 21
+                lineNumber: 20
               }
             })
           )
@@ -105930,11 +105933,29 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
   };
 
+  var miMiddleware = function miMiddleware(store) {
+    return function (next) {
+      return function (action) {
+        console.log('Se ejecuta el Middleware');
+        next(action);
+      };
+    };
+  };
+
+  var ultimoMiddleware = function ultimoMiddleware(store) {
+    return function (next) {
+      return function (action) {
+        console.log('Ultimo middleware');
+        next(action);
+      };
+    };
+  };
+
   var reducers = (0, _redux.combineReducers)({
     reducerPrueba: reducerPrueba,
     form: _reduxForm.reducer
   });
-  var store = (0, _redux.createStore)(reducers);
+  var store = (0, _redux.createStore)(reducers, (0, _redux.applyMiddleware)(miMiddleware, ultimoMiddleware));
   exports.default = store;
 },706,[499,583],"instagramClone/Store/Store.js");
 require(23);

@@ -21,6 +21,7 @@ const fieldNombre = (props) => {
         autoCapitalize={props.autocapi}
         onBlur={props.input.onBlur}
         placeholderTextColor="white"
+        style={{ color: 'white' }}
       />
       {props.meta.touched && props.meta.error && <Text style={{ color: 'red' }}>{props.meta.error}</Text>}
     </View>

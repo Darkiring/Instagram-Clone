@@ -15,7 +15,6 @@ class SignUp extends Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        
         <SignUpForm />
         <View style={styles.Button}>
           <Button
