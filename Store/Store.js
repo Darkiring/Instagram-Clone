@@ -10,7 +10,7 @@ const reducerPrueba = (state = [0], action) => {
   }
 };
 
-// ultimoMiddleware(miMiddleware(...args))
+// Asi recuerda es la logica del Middleware: ultimoMiddleware(miMiddleware(...args))
 
 const miMiddleware = store => next => (action) => {
   console.log('Se ejecuta el Middleware');

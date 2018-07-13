@@ -13,7 +13,7 @@ export default class SignIn extends Component {
     const { navigation } = this.props;
     return (
       <ImageBackground
-        source={{ uri: 'http://www.my-hd-wallpapers.es/wall_format/1389703626_graphic-of-a-desert_galaxy.jpg' }}
+        source={{ uri: 'https://lh6.googleusercontent.com/MAPHfXFsRNymfcpw3gI75KCblyZ6C1bmA1OrbZu3RfJT97A20kRXWn5qI_gV4mhUnhoPDO7DHo6UmmcVfLSL=w1870-h910-rw' }}
         style={styles.container}
         // source={{ uri: '../Background/BackGroundParis.jpg' }}
       >
@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   containerOpa: {
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    backgroundColor: 'rgba(0,0,0,0.2)',
   },
   containerOpaTex: {
-    backgroundColor: 'rgba(0,0,0,0.1)',
-    color: 'white',
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: '#FFFFFF',
     fontFamily: 'Roboto',
     fontSize: 38,
   },
