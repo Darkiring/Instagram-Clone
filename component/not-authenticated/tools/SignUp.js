@@ -10,6 +10,7 @@ import SignUpForm from './Formas/SignUpForm';
 class SignUp extends Component {
   registroDeUsuario = (values) => {
     console.log(values);
+    // Comentario para subir commit
   }
   render() {
     const { navigation } = this.props;
