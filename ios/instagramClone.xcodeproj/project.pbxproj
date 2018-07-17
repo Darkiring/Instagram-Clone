@@ -49,6 +49,11 @@
 		394D5D56075B44D7B3715636 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 244F70D34E5348A0A8840A98 /* rubicon-icon-font.ttf */; };
 		E22E2E726B374D69AD83CA3C /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF75A62D2394B019202CF57 /* SimpleLineIcons.ttf */; };
 		3462F2A3226D408BA0F10895 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B426B782B3A04190B22FC49A /* Zocial.ttf */; };
+		B2BCB961B3434FB1B67C457E /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2AD9EF3FF54DFBB65D3F85 /* Billabong.ttf */; };
+		D1FD1E840F1D41EA95B72160 /* Billabong (Instagram).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A79EB4CDA4A438CA65DE932 /* Billabong (Instagram).ttf */; };
+		D1FAE8BB00FC49D8A766E2FE /* Billabong2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CDC3AE62FAF43A4A9A5F8CC /* Billabong2.ttf */; };
+		701DE790E522441F9D8BA4E0 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3FBF58F45B94FE3830F152B /* Feather.ttf */; };
+		C5918AA1B32F4BBBB8342641 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C78C06956D2E46F6A6C14238 /* MaterialCommunityIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +371,11 @@
 		244F70D34E5348A0A8840A98 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7CF75A62D2394B019202CF57 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B426B782B3A04190B22FC49A /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8E2AD9EF3FF54DFBB65D3F85 /* Billabong.ttf */ = {isa = PBXFileReference; name = "Billabong.ttf"; path = "../assets/fonts/Billabong.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7A79EB4CDA4A438CA65DE932 /* Billabong (Instagram).ttf */ = {isa = PBXFileReference; name = "Billabong (Instagram).ttf"; path = "../assets/fonts/Billabong (Instagram).ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6CDC3AE62FAF43A4A9A5F8CC /* Billabong2.ttf */ = {isa = PBXFileReference; name = "Billabong2.ttf"; path = "../assets/fonts/Billabong2.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D3FBF58F45B94FE3830F152B /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C78C06956D2E46F6A6C14238 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,6 +653,11 @@
 				244F70D34E5348A0A8840A98 /* rubicon-icon-font.ttf */,
 				7CF75A62D2394B019202CF57 /* SimpleLineIcons.ttf */,
 				B426B782B3A04190B22FC49A /* Zocial.ttf */,
+				8E2AD9EF3FF54DFBB65D3F85 /* Billabong.ttf */,
+				7A79EB4CDA4A438CA65DE932 /* Billabong (Instagram).ttf */,
+				6CDC3AE62FAF43A4A9A5F8CC /* Billabong2.ttf */,
+				D3FBF58F45B94FE3830F152B /* Feather.ttf */,
+				C78C06956D2E46F6A6C14238 /* MaterialCommunityIcons.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1106,6 +1121,11 @@
 				394D5D56075B44D7B3715636 /* rubicon-icon-font.ttf in Resources */,
 				E22E2E726B374D69AD83CA3C /* SimpleLineIcons.ttf in Resources */,
 				3462F2A3226D408BA0F10895 /* Zocial.ttf in Resources */,
+				B2BCB961B3434FB1B67C457E /* Billabong.ttf in Resources */,
+				D1FD1E840F1D41EA95B72160 /* Billabong (Instagram).ttf in Resources */,
+				D1FAE8BB00FC49D8A766E2FE /* Billabong2.ttf in Resources */,
+				701DE790E522441F9D8BA4E0 /* Feather.ttf in Resources */,
+				C5918AA1B32F4BBBB8342641 /* MaterialCommunityIcons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

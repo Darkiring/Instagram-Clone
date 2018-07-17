@@ -20,8 +20,20 @@ const fieldNombre = (props) => {
         keyboardType={props.keyboard}
         autoCapitalize={props.autocapi}
         onBlur={props.input.onBlur}
-        placeholderTextColor="white"
-        style={{ color: 'white' }}
+        placeholderTextColor="#808080"
+        style={{
+          // Setting up TextInput height as 50 pixel.
+          height: 50,
+          // Set border width.
+           borderWidth: 1,
+           // Set border Hex Color Code Here.
+           borderColor: '#D1D1D1',
+          // Set border Radius.
+           borderRadius: 5,
+          // Set background color of Text Input.
+           backgroundColor: '#E9E9E9',
+           margin: 5,
+          }}
       />
       {props.meta.touched && props.meta.error && <Text style={{ color: 'red' }}>{props.meta.error}</Text>}
     </View>
@@ -54,7 +66,7 @@ const SignInForm = (props) => {
     <View>
       <Text style={styles.texto}> Iniciar sesion </Text>
       <Field name="correo" component={fieldNombre} ph="Ingrese su correo" keyboard="email-address" autocapi="none" />
-      <Field name="password" component={fieldNombre} ph="Ingrese su contraseña" sc />
+      <Field name="password" component={fieldNombre} ph="Ingrese su contraseña" sc autocapi="none" />
       <Button
         title="Ingresar"
         onPress={props.handleSubmit(values => console.log(values))}

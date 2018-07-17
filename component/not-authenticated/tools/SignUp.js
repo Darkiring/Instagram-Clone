@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
   StyleSheet,
   Button,
-  TextInput,
-  Image,
 } from 'react-native';
 import { connect } from 'react-redux';
 import SignUpForm from './Formas/SignUpForm';
 
 class SignUp extends Component {
+  registroDeUsuario = (values) => {
+    console.log(values);
+  }
   render() {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <SignUpForm />
+        <SignUpForm registro={this.registroDeUsuario} />
         <View style={styles.Button}>
           <Button
             title="Cancelar"
@@ -50,4 +50,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
-

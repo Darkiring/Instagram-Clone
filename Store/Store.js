@@ -1,5 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { reducer as form } from 'redux-form';
+import createSagaMiddleware from 'redux-saga';
+import funcionPrimaria from './Sagas/Sagas';
 
 const reducerPrueba = (state = [0], action) => {
   switch (action.type) {
@@ -10,23 +12,15 @@ const reducerPrueba = (state = [0], action) => {
   }
 };
 
-// Asi recuerda es la logica del Middleware: ultimoMiddleware(miMiddleware(...args))
-
-const miMiddleware = store => next => (action) => {
-  console.log('Se ejecuta el Middleware');
-  next(action);
-};
-
-const ultimoMiddleware = store => next => (action) => {
-  console.log('Ultimo middleware');
-  next(action);
-};
+const sagaMiddleware = createSagaMiddleware();
 
 const reducers = combineReducers({
   reducerPrueba,
   form,
 });
 
-const store = createStore(reducers, applyMiddleware(miMiddleware, ultimoMiddleware));
+const store = createStore(reducers, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(funcionPrimaria);
 
 export default store;
