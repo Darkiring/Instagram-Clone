@@ -22,10 +22,7 @@ export default class SignIn extends Component {
               source={{ uri: 'http://pngimg.com/uploads/instagram/instagram_PNG5.png' }}
             />
           </View>
-          <View style={styles.containerOpa}>
-            <SignInForm />
-
-          </View>
+          <SignInForm />
         </Content>
         <Footer
           style={{ backgroundColor: '#F9F9F9' }}

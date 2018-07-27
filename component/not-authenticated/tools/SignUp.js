@@ -10,6 +10,7 @@ import SignUpForm from './Formas/SignUpForm';
 class SignUp extends Component {
   registroDeUsuario = (values) => {
     console.log(values);
+    this.props.registro(values);
     // Comentario para subir commit
   }
   render() {
@@ -45,8 +46,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  aumentar: () => {
-    dispatch({ type: 'AUMENTAR_REDUCER_PRUEBA' });
+  registro: (values) => {
+    dispatch({ type: 'REGISTRO', datos: values });
   },
 });
 

@@ -33,7 +33,7 @@ const validate = (values) => {
     errors.nombre = 'Campo requerido';
   } else if (values.nombre.length < 5) {
     errors.nombre = 'El nombre de usuario debe al menos tener un tamaño minimo de 5 caracteres';
-  } else if (values.nombre.lenght > 10) {
+  } else if (values.nombre.length > 10) {
     errors.nombre = 'El nombre de usuario es demasiado grande';
   }
 
@@ -45,9 +45,9 @@ const validate = (values) => {
 
   if (!values.password) {
     errors.password = 'Contraseña requerida';
-  } else if (values.password.lenght < 6) {
+  } else if (values.password.length < 6) {
     errors.password = 'Contraseña muy corta';
-  } else if (values.password.lenght > 15) {
+  } else if (values.password.length > 15) {
     errors.passsword = 'La contraseña no puede ser mayor a 15 caracteres';
   }
 
@@ -72,23 +72,7 @@ const SignUpForm = (props) => {
       <Button
         style={{ alignItems: 'center' }}
         title="Registrar"
-        onPress={props.handleSubmit((values) => {
-          console.log(values);
-          // console.log(autenticacion);
-          autenticacion
-          .createUserWithEmailAndPassword(values.correo, values.password)
-          .then((success) => {
-            console.log(success);
-          })
-          .catch((error) => {
-            // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode);
-            console.log(errorMessage);
-            // ...
-          });
-        })}
+        onPress={props.handleSubmit(props.registro)}
       />
     </View>
   );
