@@ -16,11 +16,14 @@ import Store from './Store/Store';
 
 export default class App extends Component {
   constructor() {
+    console.ignoredYellowBox = [
+      'Setting a timer',
+    ];
     super();
-    this.state = {
-      texto: 'hola',
-    };
+    this.state = {};
   }
+
+
   render() {
     return (
       <View style={styles.container}>

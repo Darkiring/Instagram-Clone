@@ -9,23 +9,20 @@ import {
 import { Field, reduxForm } from 'redux-form';
 import { autenticacion } from '../../../../Store/Servicios/Firebase';
 
-const fieldNombre = (props) => {
-  console.log('Inputs');
-  return (
-    <View>
-      <TextInput
-        placeholder={props.ph}
-        onChangeText={props.input.onChange}
-        value={props.input.value}
-        secureTextEntry={props.sc}
-        keyboardType={props.keyboard}
-        autoCapitalize={props.autocapi}
-        onBlur={props.input.onBlur}
-      />
-      {props.meta.touched && props.meta.error && <Text style={{ color: 'red' }}>{props.meta.error}</Text>}
-    </View>
-  );
-};
+const fieldNombre = props => (
+  <View>
+    <TextInput
+      placeholder={props.ph}
+      onChangeText={props.input.onChange}
+      value={props.input.value}
+      secureTextEntry={props.sc}
+      keyboardType={props.keyboard}
+      autoCapitalize={props.autocapi}
+      onBlur={props.input.onBlur}
+    />
+    {props.meta.touched && props.meta.error && <Text style={{ color: 'red' }}>{props.meta.error}</Text>}
+  </View>
+);
 
 const validate = (values) => {
   const errors = {};
@@ -60,23 +57,20 @@ const validate = (values) => {
   return errors;
 };
 
-const SignUpForm = (props) => {
-  console.log('SignUpForm');
-  return (
-    <View>
-      <Text style={styles.texto}> Datos necesarios para registro </Text>
-      <Field name="nombre" component={fieldNombre} ph="Ingrese su nombre Usuario" />
-      <Field name="correo" component={fieldNombre} ph="Ingrese su correo" keyboard="email-address" autocapi="none" />
-      <Field name="password" component={fieldNombre} ph="Ingrese su contraseña" sc />
-      <Field name="confirmacion" component={fieldNombre} ph="Ingrese nuevamente su contraseña" sc />
-      <Button
-        style={{ alignItems: 'center' }}
-        title="Registrar"
-        onPress={props.handleSubmit(props.registro)}
-      />
-    </View>
-  );
-};
+const SignUpForm = props => (
+  <View>
+    <Text style={styles.texto}> Datos necesarios para registro </Text>
+    <Field name="nombre" component={fieldNombre} ph="Ingrese su nombre Usuario" />
+    <Field name="correo" component={fieldNombre} ph="Ingrese su correo" keyboard="email-address" autocapi="none" />
+    <Field name="password" component={fieldNombre} ph="Ingrese su contraseña" sc />
+    <Field name="confirmacion" component={fieldNombre} ph="Ingrese nuevamente su contraseña" sc />
+    <Button
+      style={{ alignItems: 'center' }}
+      title="Registrar"
+      onPress={props.handleSubmit(props.registro)}
+    />
+  </View>
+);
 
 const styles = StyleSheet.create({
   texto: {
