@@ -5,12 +5,20 @@ import {
   Text,
   Image,
 } from 'react-native';
-import { Footer, Button, Container, Content } from 'native-base';
+import {
+  Footer, Button, Container, Content,
+} from 'native-base';
+import { connect } from 'react-redux';
 import SignInForm from './Formas/SignInForm';
 
-export default class SignIn extends Component {
+class SignIn extends Component {
+  singinDeUsuario = (values) => {
+    this.props.login(values);
+  }
+
   render() {
     const { navigation } = this.props;
+    const account = '¿No tienes una cuenta?  ';
     return (
       <Container style={styles.container}>
         <Content
@@ -19,10 +27,10 @@ export default class SignIn extends Component {
           <View style={styles.containerInst}>
             <Image
               style={styles.containerOpaTex}
-              source={{ uri: 'http://pngimg.com/uploads/instagram/instagram_PNG5.png' }}
+              source={require('../Background/instagram_PNG5.png')}
             />
           </View>
-          <SignInForm />
+          <SignInForm login={this.singinDeUsuario} />
         </Content>
         <Footer
           style={{ backgroundColor: '#F9F9F9' }}
@@ -31,10 +39,13 @@ export default class SignIn extends Component {
             full
             transparent
             onPress={() => {
-                navigation.navigate('SignUp');
-                }}
+              navigation.navigate('SignUp');
+            }}
           >
-            <Text>¿No tienes una cuenta? <Text style={{ fontWeight: 'bold', color: 'black' }}>Regístrate.</Text></Text>
+            <Text>
+              {account}
+              <Text style={{ fontWeight: 'bold', color: 'black' }}>Regístrate.</Text>
+            </Text>
           </Button>
         </Footer>
       </Container>
@@ -59,3 +70,15 @@ const styles = StyleSheet.create({
     resizeMode: 'center',
   },
 });
+
+const mapStateToProps = state => ({
+  prop: state.prop,
+});
+
+const mapDispatchToProps = dispatch => ({
+  login: (datos) => {
+    dispatch({ type: 'LOGIN', datos });
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

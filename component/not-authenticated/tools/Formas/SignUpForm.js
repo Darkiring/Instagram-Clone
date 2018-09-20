@@ -29,8 +29,8 @@ const validate = (values) => {
   if (!values.nombre) {
     errors.nombre = 'Campo requerido';
   } else if (values.nombre.length < 5) {
-    errors.nombre = 'El nombre de usuario debe al menos tener un tamaño minimo de 5 caracteres';
-  } else if (values.nombre.length > 10) {
+    errors.nombre = 'El nombre de usuario debe tener un tamaño minimo de 5 caracteres';
+  } else if (values.nombre.length > 23) {
     errors.nombre = 'El nombre de usuario es demasiado grande';
   }
 

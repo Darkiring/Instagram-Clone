@@ -13,6 +13,7 @@ class SignUp extends Component {
     this.props.registro(values);
     // Comentario para subir commit
   }
+
   render() {
     const { navigation } = this.props;
     return (
@@ -22,8 +23,8 @@ class SignUp extends Component {
           <Button
             title="Cancelar"
             onPress={() => {
-          navigation.goBack();
-        }}
+              navigation.goBack();
+            }}
           />
         </View>
       </View>
