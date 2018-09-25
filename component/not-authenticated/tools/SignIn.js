@@ -10,6 +10,7 @@ import {
 } from 'native-base';
 import { connect } from 'react-redux';
 import SignInForm from './Formas/SignInForm';
+import { actionLogin } from '../../../Store/Actions';
 
 class SignIn extends Component {
   singinDeUsuario = (values) => {
@@ -77,7 +78,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   login: (datos) => {
-    dispatch({ type: 'LOGIN', datos });
+    dispatch(actionLogin(datos));
   },
 });
 

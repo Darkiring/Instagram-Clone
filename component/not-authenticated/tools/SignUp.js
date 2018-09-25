@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import SignUpForm from './Formas/SignUpForm';
+import { actionRegistro } from "../../../Store/Actions";
 
 class SignUp extends Component {
   componentDidMount() {
@@ -72,7 +73,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   registro: (values) => {
-    dispatch({ type: 'REGISTRO', datos: values });
+    dispatch((actionRegistro(values)));
   },
 });
 
