@@ -3,16 +3,40 @@ import {
   View,
   StyleSheet,
   Button,
+  BackHandler,
 } from 'react-native';
 import { connect } from 'react-redux';
 import SignUpForm from './Formas/SignUpForm';
 
 class SignUp extends Component {
+  componentDidMount() {
+    this.eventListener();
+  }
+
+  componentWillUnmount() {
+    this.remvEventListener();
+  }
+
   registroDeUsuario = (values) => {
     console.log(values);
     this.props.registro(values);
     // Comentario para subir commit
   }
+
+  onClose = () => {
+    const { navigation } = this.props;
+    navigation.goBack();
+    return true;
+  }
+
+  eventListener() {
+    BackHandler.addEventListener('hardwareBackPress', this.onClose);
+  }
+
+  remvEventListener() {
+    BackHandler.removeEventListener('hardwareBackPress', this.onClose);
+  }
+
 
   render() {
     const { navigation } = this.props;
