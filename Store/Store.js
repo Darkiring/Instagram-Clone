@@ -14,6 +14,7 @@ const reducerPrueba = (state = [0], action) => {
 };
 
 const reducerSession = (state = null, action) => {
+  // To commit
   switch (action.type) {
     case Constans.sessionOpen:
       return action.user;
