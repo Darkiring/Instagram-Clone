@@ -13,6 +13,7 @@ import { Provider } from 'react-redux';
 import NotAutenticateRoutes from './component/not-authenticated/notAuthenticateRoutes';
 // import AuthenticatedRutas from './component/authenticated/AuthenticatedRutas';
 import Store from './Store/Store';
+import Select from './Select';
 
 export default class App extends Component {
   constructor() {
@@ -27,7 +28,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Provider store={Store}>
-          <NotAutenticateRoutes />
+          <Select />
         </Provider>
       </View>
     );

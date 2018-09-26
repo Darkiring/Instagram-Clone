@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import SignUpForm from './Formas/SignUpForm';
-import { actionRegistro } from "../../../Store/Actions";
+import { actionRegistro } from '../../../Store/Actions';
 
 class SignUp extends Component {
   componentDidMount() {
